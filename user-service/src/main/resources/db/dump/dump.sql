@@ -61,7 +61,7 @@ CREATE TABLE public.confirm_user (
     type_id BIGINT,
     token VARCHAR(512) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT confirm_user_pkey PRIMARY KEY (id),
     CONSTRAINT confirm_user_user_id_fkey FOREIGN KEY (user_id)
         REFERENCES public.user (id) ON DELETE CASCADE,
