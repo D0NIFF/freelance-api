@@ -37,7 +37,7 @@ public class ConfirmUserEntity {
     private Instant createdAt;
 
     @ColumnDefault("CURRENT_TIMESTAMP")
-    @Column(name = "updated_at")
-    private Instant updatedAt;
+    @Column(name = "deleted_at")
+    private Instant deletedAt;
 
 }
